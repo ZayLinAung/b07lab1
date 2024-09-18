@@ -46,10 +46,6 @@ public class Polynomial{
     }
 
     public boolean hasRoot(double x){
-        double result = 0.0;
-        for (int i = 0; i < coefficients.length; i++){
-            result += coefficients[i] * Math.pow(x, i);
-        }
-        return result == 0;
+        return evaluate(x) == 0;
     }
 }
